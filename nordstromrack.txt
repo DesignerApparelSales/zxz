@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="author" content="Haven Tran"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=240" />
+
+
+<title>Page 1</title>
+
+         <style type="text/css">
+
+
+
+
+
+
+   
+    </style>
+
+</head>
+
+<div id="setkeeper3" style="display:block !important;font-size:xx-large;">Let's Begin, Nordstrom Rack</div>
+
+
+<body onLoad="onLoadallsec2()">
+
+
+  <div class="initialloader" style="display:none !important;font-size:0px !important;"></div>
+      
+      
+     
+     
+
+      <!------------------------------------------------------------------------------------------------end-------------->       
+      
+              
+
+
+
+
+  
+ 
+  <script type="text/javascript" src="./01_files/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+
+  <script type="text/javascript" src="./01_files/advanced-http.js"></script>
+ 
+ <script type="text/javascript" charset="utf-8">
+
+
+var totalerrchecker3=0;
+var totalitems37=2;
+var totaljson="";
+var szi = 1;
+var catemore3 = 'women';
+
+
+function onff8(rr) {
+	totaljson="";
+
+
+var url33 = "https://github.com/havenht/zxz/edit/master/nordstrom.json";	
+ 
+
+
+var ref1 =cordova.InAppBrowser.open(url33, '_blank', 'location=yes,toolbarcolor=#000000,closebuttoncolor=#cc33cc,navigationbuttoncolor=#00FFFF,hidden=no,closebuttoncaption=Done,toolbar=yes,shouldPauseOnSuspend=yes,enableViewportScale=yes,clearcache=no,clearsessioncache=no');
+
+
+
+
+
+
+  ref1.addEventListener('loadstop', function(event) {
+	  
+	
+	  
+	      ref1.executeScript({ code: "document.getElementsByClassName('js-code-textarea')[0].innerHTML="+ JSON.stringify(rr) +";	 setTimeout(function(){document.getElementById('submit-file').disabled = false;document.getElementById('submit-file').click();}, 33733); " });
+	  
+	
+	   
+	 var myVar77 =setInterval(function(){ if(event.url=="https://github.com/havenht/zxz/blob/master/nordstrom.json"){ clearInterval(myVar77);setTimeout(function(){ window.location.reload(); }, 3377); } }, 7000);
+	  
+
+	  
+
+	  });
+
+
+
+ ref1.addEventListener('exit', function() { 
+window.location.href='Home Page.html';
+
+
+   });
+ 
+
+
+ 
+
+ 
+}
+
+
+
+
+function onLoadallsec2(){
+	
+
+
+
+
+if (window.localStorage.getItem("totalerrchecker3") === null || window.localStorage.getItem("totalerrchecker3").length === 0)
+{window.localStorage.setItem("totalerrchecker3",0);}
+
+else
+
+{
+	
+	
+
+	window.localStorage.setItem("totalerrchecker3",parseInt(window.localStorage.getItem("totalerrchecker3"), 10)+1);}
+
+
+
+$(document).ready(function() { 
+	
+	firsthttp333();
+//	secondhttp333();   /// use this if there is error in ajax, but it is not working, you must fix it
+	
+	function firsthttp333(){
+	
+var dds="https://www.nordstromrack.com/clearance/Women/Clothing?sort=featured";   
+initialajax3(dds);
+
+
+function initialajax3(dds){
+	 var xhr = $.ajax({
+ type: 'GET',
+ cache: true,
+ url: dds,
+ dataType: 'html',
+ success: function(data, status, xml){
+	 
+	 
+	 
+
+	 
+	// document.getElementsByClassName("initialloader")[0].innerHTML=data;
+	 
+	//data="";
+	 
+	 
+	 
+	 
+
+
+for (var si = 3000; si >=0; si--) { 
+
+var np1 =  data.match(new RegExp('"pageNumber":'+ si+'}', "g"));
+	   if(np1 !=null){break;}; 
+	
+
+
+}
+	
+	
+	data=""; 
+	 
+	 
+
+	 
+	 var totalitems37= si; 
+	 
+	if(si==10000){alert('Error, need to fix "totalitems37"');}
+	 
+	 srfg(totalitems37);
+	 
+	 
+	 
+	 
+	 
+	 },
+ error: function(xml, status, error){
+	 
+	 if(window.localStorage.getItem("totalerrchecker3")>=5){ window.localStorage.setItem("totalerrchecker3",0); alert('Error in system, webpage, or no internet conntection. Please check your internet and try again. If still does not work. Contact Hau Tran');}
+	 
+	 else
+	 {
+		 
+		setTimeout(function(){	
+
+		 
+		  window.location.reload();
+		  
+		  
+		}, 10333);   
+		  }
+	 
+	
+	 
+	 },
+ complete: function(xml, status){
+  // do something after success or error no matter what
+  
+
+ }
+});
+
+}
+
+
+
+function srfg(iii){
+
+document.getElementsByClassName("initialloader")[0].innerHTML= "";
+	
+iii=1; //change here for testing
+
+if ( szi <= iii) { 
+
+
+
+		
+
+
+if(catemore3 == 'women'){ var sdeff=1;
+
+if(szi==1){
+	var dds="https://www.nordstromrack.com/clearance/Women/Clothing?sort=featured";  //clothing
+	
+	}
+else
+{
+	
+	
+	
+var dds="https://www.nordstromrack.com/clearance/Women/Clothing?page="+ szi+"&sort=featured";	//changer here
+}
+
+}
+
+else
+
+if(catemore3 == 'men'){var sdeff=2;
+	
+if(szi==1){
+	
+	var dds="https://shop.nordstrom.com/c/sale-mens-clothing?breadcrumb=Home%2FSale%2FMen%2FClothing&offset=1&sort=Newest"; //clothing
+	}
+else
+{
+	
+	
+var dds="https://shop.nordstrom.com/c/sale-mens-clothing?breadcrumb=Home%2FSale%2FMen%2FClothing&offset=1&page="+ szi+"&sort=Newest";
+}
+
+}
+
+else
+
+if(catemore3 == 'kids'){ var sdeff=3;  //kid girls
+
+if(szi==1){
+	var dds="https://shop.nordstrom.com/c/sale-girls-apparel?breadcrumb=Home%2FSale%2FKids%2FGirls%2FClothing&sort=Newest";
+	
+	}
+else
+{
+	
+	
+	
+	
+var dds="https://shop.nordstrom.com/c/sale-girls-apparel?breadcrumb=Home%2FSale%2FKids%2FGirls%2FClothing&page="+ szi+"&sort=Newest";
+}
+
+}
+
+
+
+
+
+
+else
+
+if(catemore3 == 'home'){ var sdeff=4;
+
+
+if(szi==1){
+	
+	var dds="https://shop.nordstrom.com/c/sale-home-gifts?breadcrumb=Home%2FSale%2FHome&offset=1&sort=Newest";	
+	}
+else
+{
+	
+	
+var dds="https://shop.nordstrom.com/c/sale-home-gifts?breadcrumb=Home%2FSale%2FHome&offset=1&page="+ szi+"&sort=Newest";	
+}
+
+
+}
+
+
+
+
+
+
+
+/////////////////////////women
+
+//changeoption
+
+
+else
+
+if(catemore3 == 'wwaccessory'){ var sdeff=5;
+
+
+if(szi==1){
+	
+	var dds="https://shop.nordstrom.com/c/sale-womens-jewelry-watches?breadcrumb=Home%2FSale%2FWomen%2FJewelry&sort=Newest";	
+	}
+else
+{
+	
+	
+var dds="https://shop.nordstrom.com/c/sale-womens-jewelry-watches?breadcrumb=Home%2FSale%2FWomen%2FJewelry&page="+ szi+"&sort=Newest";	
+}
+
+
+}
+
+else
+
+if(catemore3 == 'wwhandbag'){ var sdeff=6;
+
+
+if(szi==1){
+	
+	var dds="https://shop.nordstrom.com/c/sale-handbags-accessories?breadcrumb=Home%2FSale%2FWomen%2FAccessories&offset=1&sort=Newest";	
+	}
+else
+{
+	
+	
+var dds="https://shop.nordstrom.com/c/sale-handbags-accessories?breadcrumb=Home%2FSale%2FWomen%2FAccessories&offset=1&page="+ szi+"&sort=Newest";	
+}
+
+
+}
+
+
+
+else
+
+if(catemore3 == 'wwshoes'){ var sdeff=7;
+
+
+if(szi==1){
+	
+	var dds="https://shop.nordstrom.com/c/sale-womens-shoes?breadcrumb=Home%2FSale%2FWomen%2FShoes&sort=Newest";	
+	}
+else
+{
+	
+	
+var dds="https://shop.nordstrom.com/c/sale-womens-shoes?breadcrumb=Home%2FSale%2FWomen%2FShoes&page="+ szi+"&sort=Newest";	
+}
+
+
+}
+
+else
+
+if(catemore3 == 'wwplus'){ var sdeff=8;   //kid boys
+
+
+if(szi==1){
+	
+	var dds="https://shop.nordstrom.com/c/sale-boys-apparel?breadcrumb=Home%2FSale%2FKids%2FBoys%2FClothing&sort=Newest";
+	}
+else
+{
+	
+	
+var dds="https://shop.nordstrom.com/c/sale-boys-apparel?breadcrumb=Home%2FSale%2FKids%2FBoys%2FClothing&page="+ szi+"&sort=Newest";
+}
+
+
+}
+
+
+
+
+
+
+
+/////////////////////////men
+
+
+
+
+else
+
+if(catemore3 == 'mmaccessory'){ var sdeff=9;
+
+
+if(szi==1){
+	
+	var dds="https://shop.nordstrom.com/c/sale-mens-accessories?breadcrumb=Home%2FSale%2FMen%2FAccessories&offset=1&sort=Newest";	
+	}
+else
+{
+	
+	
+var dds="https://shop.nordstrom.com/c/sale-mens-accessories?breadcrumb=Home%2FSale%2FMen%2FAccessories&offset=1&page="+ szi+"&sort=Newest";	
+}
+
+
+}
+
+
+
+
+else
+
+if(catemore3 == 'mmshoes'){ var sdeff=10;
+
+
+if(szi==1){
+	
+	var dds="https://shop.nordstrom.com/c/sale-mens-shoes?breadcrumb=Home%2FSale%2FMen%2FShoes&offset=1&sort=Newest";	
+	}
+else
+{
+	
+	
+var dds="https://shop.nordstrom.com/c/sale-mens-shoes?breadcrumb=Home%2FSale%2FMen%2FShoes&offset=1&page="+ szi+"&sort=Newest";	
+}
+
+
+}
+
+
+
+
+
+
+
+
+/////////////////////////kid shoes and accessory
+
+
+
+
+else
+
+if(catemore3 == 'kkaccessory'){ var sdeff=11;
+
+
+if(szi==1){
+	
+	var dds="https://shop.nordstrom.com/c/sale-baby-gear?breadcrumb=Home%2FSale%2FKids%2FBaby%20Gear%20%26%20Essentials&sort=Newest";	
+	}
+else
+{
+	
+	
+
+	
+var dds="https://shop.nordstrom.com/c/sale-baby-gear?breadcrumb=Home%2FSale%2FKids%2FBaby%20Gear%20%26%20Essentials&page="+ szi+"&sort=Newest";	
+}
+
+
+}
+
+
+
+else
+
+if(catemore3 == 'kkshoes'){ var sdeff=12;
+
+
+if(szi==1){
+	
+	var dds="https://shop.nordstrom.com/c/baby-kids-shoes-sale?breadcrumb=Home%2FSale%2FKids%2FShoes&sort=Newest";	
+	}
+else
+{
+	
+var dds="https://shop.nordstrom.com/c/baby-kids-shoes-sale?breadcrumb=Home%2FSale%2FKids%2FShoes&page="+ szi+"&sort=Newest";	
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById('setkeeper3').innerHTML= " " + szi + " of " + iii +" " +" , " + sdeff + "/12  ("+catemore3 +")";  //changer here 
+
+
+
+
+
+	$.ajaxSetup({ cache: true }); 
+	
+	 var xhr = $.ajax({
+ type: 'GET',
+ cache: true,
+ url: dds,
+ dataType: 'html',
+ success: function(data, status, xml){
+	 
+	
+	for (var si = 3000; si >=0; si--) { 
+
+var np1 =  data.match(new RegExp('"pageNumber":'+ si+'}', "g"));
+	   if(np1 !=null){iii=si; break;}; 
+	
+
+
+}
+	
+
+	
+	
+	iii=1; //change here for testing
+	
+	
+	
+	
+	 document.getElementsByClassName("initialloader")[0].innerHTML=data;
+	 
+	data="";
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	
+
+var dsrll=document.getElementsByClassName("product-grid-item").length; alert(dsrll);
+
+
+document.getElementsByClassName("initialloader")[0].innerHTML= document.getElementsByClassName("initialloader")[0].innerHTML.replace(/data-src/gi, "src");
+
+
+
+
+
+
+var brando;
+var itemnum777; 
+var urladrss777; 
+var img777; 
+var description777; 
+var regprice777;
+var saleprice777; 
+var percentprice777; 
+var arrayOfObjects3 = new Array();
+
+//for (var i = dsrll-1; i >= 0; i--) {  
+
+for (var i = 0; i < dsrll; i++) {
+	
+	
+	  //change here 0
+
+ itemnum777=i+1+(szi*1000); 
+ 
+ 
+ 
+
+
+		
+		 if($('.product-grid-item').eq(i).find(".product-grid-item__brand").eq(0).html()!=undefined){  //changdo
+		 
+	brando=	$('.product-grid-item').eq(i).find(".product-grid-item__brand").eq(0).text(); 
+
+	}
+	
+	else
+	{ brando="";}
+	alert(brando);
+
+////////////////////////////////////////////// a tag
+
+	
+		
+		if($('.product-grid-item').eq(i).html()!=undefined){
+			
+			
+		urladrss777=$('.product-grid-item').eq(i).getAttribute('href');
+			
+			}
+	
+	else
+	{ urladrss777=""; }
+
+
+/////////////////////////////////////////
+
+alert(urladrss777);
+
+
+////////////////////////////////////////////// img tag
+
+	if($('.product-grid-item').eq(i).find("img").eq(0).html()!=undefined){ 
+
+for (var im = 0; im <= document.getElementsByClassName("product-grid-item__catalog-image")[i].querySelectorAll('img').length-1; im++) {
+ var sed= document.getElementsByClassName("product-grid-item__catalog-image")[i].querySelectorAll('img')[im].getAttribute('src'); 
+  if(sed.indexOf('http') >-1){
+
+
+
+
+img777=document.getElementsByClassName("product-grid-item__catalog-image")[i].querySelectorAll('img')[im].getAttribute('src'); 
+
+  
+  break;}
+   else
+  {img777="";}
+  
+  
+}
+
+
+
+
+	}
+	
+	else
+	{  img777="";}
+
+///////////////////////////////////////// sale price
+
+alert(img777);
+
+
+
+
+
+		if($('.product-grid-item').eq(i).find(".product-grid-item__title").eq(0).html()!=undefined){    //changdo 
+		
+	var descri =$('.product-grid-item').eq(i).find(".product-grid-item__title").eq(0).text();
+		descri =descri.replace(/\s\s\s\s/gi,'');
+		
+
+
+description777 = descri.replace(brando, "");
+
+	}
+	
+	else
+	{ description777 ="";}
+	
+
+
+
+
+
+alert(description777);
+
+
+
+	if($('.product-grid-item').eq(i).html()!=undefined){ 
+		
+		
+		
+		
+		if($('.product-grid-item').eq(i).find(".product-grid-item__retail-price").eq(0).html()!=undefined){   //changdo all
+		
+		
+regprice777=$('.product-grid-item').eq(i).find(".product-grid-item__retail-price").eq(0);
+
+
+
+if(regprice777== null || (typeof regprice777 == 'undefined') || regprice777.length==0 ){regprice777='$1.37';}
+else
+{
+	
+	regprice777=$('.product-grid-item').eq(i).find(".product-grid-item__retail-price").eq(0).text();
+	}
+
+
+
+	}
+	
+	else
+	{ regprice777='$1.37';}
+
+
+alert(regprice777);
+
+
+	if($('.product-grid-item').eq(i).find(".product-grid-item__sale-price").eq(0).html()!=undefined){
+		
+saleprice777=$('.product-grid-item').eq(i).find(".product-grid-item__sale-price").eq(0);
+
+
+if(saleprice777== null || (typeof saleprice777 == 'undefined') || saleprice777.length==0  ){saleprice777='$1.37';}
+else
+{
+	
+
+	saleprice777=$('.product-grid-item').eq(i).find(".product-grid-item__sale-price").eq(0).text();
+	
+	}
+
+
+	}
+	
+	else
+	{ saleprice777='$1.37';}
+
+
+alert(saleprice777);
+
+	if($('.product-grid-item').eq(i).find(".product-grid-item__retail-price-discount").eq(0).html()!=undefined){
+		
+		
+	var ZSN8RQ777=	$('.product-grid-item').eq(i).find(".product-grid-item__retail-price-discount").eq(0);
+
+
+if(ZSN8RQ777== null || (typeof ZSN8RQ777 == 'undefined') || ZSN8RQ777.length==0 ){ZSN8RQ777=0;}
+else
+{
+	
+
+	
+	ZSN8RQ777=	$('.product-grid-item').eq(i).find(".product-grid-item__retail-price-discount").eq(0).text();
+	
+	}
+
+
+	}
+	
+	else
+	{ ZSN8RQ777=0;}
+
+
+alert(ZSN8RQ777);
+
+saleprice777= saleprice777.replace(/1,/, 1).replace(/2,/, 2).replace(/3,/, 3).replace(/4,/, 4).replace(/5,/, 5).replace(/6,/, 6).replace(/7,/, 7).replace(/8,/, 8).replace(/9,/, 9).replace(/0,/, 0);
+
+regprice777= regprice777.replace(/1,/, 1).replace(/2,/, 2).replace(/3,/, 3).replace(/4,/, 4).replace(/5,/, 5).replace(/6,/, 6).replace(/7,/, 7).replace(/8,/, 8).replace(/9,/, 9).replace(/0,/, 0);
+
+
+
+ if (/\$(\d+\.\d\d(?!\d))/.test(regprice777)){
+var rr = regprice777.match(/\$(\d+\.\d\d(?!\d))/gi)[0];  // get first $reg
+}
+  else {
+var rr='$1.37';
+  
+  }
+  
+  
+ if (/\$(\d+\.\d\d(?!\d))/.test(saleprice777)){
+var ss = saleprice777.match(/\$(\d+\.\d\d(?!\d))/gi)[0]; // get first $sale
+}
+  else {
+var ss='$1.37';
+  
+  }
+
+
+  if (/(\d+)%/.test(ZSN8RQ777)){
+  var pp = ZSN8RQ777.match(/(\d+)%/gi)[0]; // get first percent%
+  }
+  else {
+  var pp="";
+  
+  }
+
+
+
+
+		 	
+		regprice777=rr.slice(1);  //take out dollar sign
+		saleprice777=ss.slice(1);  //take out dollar sign
+		
+		
+regprice777=parseFloat(regprice777).toFixed(2);
+saleprice777=parseFloat(saleprice777).toFixed(2);
+
+
+
+	if (pp.length>0){  
+	
+		//percentprice777=parseFloat(pp);
+		 percentprice777=parseInt(pp, 10);	
+}
+else
+	if (regprice777==1.37 || saleprice777==1.37){  
+	
+		percentprice777=31.33; 
+}
+
+
+	else
+	{	 
+ 
+		 percentprice777= regprice777-saleprice777;
+		 percentprice777= (percentprice777/regprice777) * 100; 
+		
+		percentprice777=parseInt(percentprice777, 10);	
+	}
+		
+ 
+ 
+
+ 
+  if(percentprice777==null || percentprice777==0 ){percentprice777=31.33;}  // 31.33 will replace to nothing
+
+
+  
+ 
+if(isNaN(percentprice777)){percentprice777=31.33;}
+if(isNaN(regprice777)){regprice777=1.37;}
+if(isNaN(saleprice777)){saleprice777=1.37;}
+ 
+
+	
+
+
+	
+	 if (/-/.test($('.product-grid-item').eq(i).find(".product-grid-item__retail-price-discount").eq(0).text())){  //changdo
+percentprice777=percentprice777+.001357;
+}
+
+
+
+
+
+
+
+
+	
+	
+	
+
+	
+
+	
+	
+	
+	}
+	
+	else
+	{ percentprice777=31.33;regprice777=1.37;saleprice777=1.37;}
+
+//var dddp=window.localStorage.getItem('page3url');
+
+
+var dddp='z1_nsaz';
+
+ dddp=dddp.replace(".html", ""); 
+
+
+
+
+
+
+
+
+if(catemore3=='women'){var gennder77="lady women woman female";}   //changer here  //clothing
+else
+if(catemore3=='men'){var gennder77="guy men man male";}
+else
+if(catemore3=='kids'){var gennder77="kids boys girls infant toddler child children baby young";}
+
+else
+if(catemore3=='home'){var gennder77="home pillows bedding luggage blankets collection comforters";}
+
+
+////////////////////////////women  changeoption
+
+else
+if(catemore3=='wwaccessory'){var gennder77="lady female women woman accessory jewelry accessories necklaces bracelets jewelries rings earrings wallets watches purses";}
+
+else
+if(catemore3=='wwhandbag'){var gennder77="lady female women woman handbags backpacks wallets bags purses";}
+
+else
+if(catemore3=='wwshoes'){var gennder77="lady female women woman shoes sandals high heel sneakers boots";}
+
+else
+if(catemore3=='wwplus'){var gennder77="kids boys girls infant toddler child children baby young";}
+
+
+
+
+
+
+///////////////////////////////////////men
+
+else
+if(catemore3=='mmaccessory'){var gennder77="male men man guy accessory jewelry accessories necklaces bracelets jewelries rings earrings wallets watches purses";}
+
+else
+if(catemore3=='mmshoes'){var gennder77="male men man guy shoes sandals high heel sneakers boots";}
+
+
+
+///////////////////////////////////////kid
+
+else
+if(catemore3=='kkaccessory'){var gennder77="kids boys girls baby young infant toddler child children accessory jewelry accessories necklaces bracelets jewelries rings earrings wallets watches purses";}
+else
+if(catemore3=='kkshoes'){var gennder77="kids boys girls baby young infant toddler child children shoes sandals high heel sneakers boots";}
+
+
+
+
+
+
+if(isNaN(percentprice777)){percentprice777=31.33;}
+
+if(isNaN(regprice777)){regprice777=1.37;}
+if(isNaN(saleprice777)){saleprice777=1.37;}
+
+
+
+if(regprice777==1.37 && saleprice777==1.37){saleprice777==73.71}
+else
+if(saleprice777==1.37){saleprice777=regprice777;}
+
+
+
+if((percentprice777<=2)){percentprice777=31.33;}
+
+if(saleprice777<=1.37){saleprice777=1.37;}
+
+if(regprice777 <=1.37 ){regprice777=1.37;}
+
+
+alert(percentprice777);
+
+var feed3 =    {
+        kidss3:"none",
+		genderr3:gennder77,
+        urlnum3: dddp,
+        itemsnum3: itemnum777,
+		brand3: brando,
+        desscrip: description777,
+        regprice3: regprice777,
+        saleprice3: saleprice777,
+        percent33: percentprice777,
+        urladrss777: urladrss777,
+        img777: img777
+   
+    };
+
+
+arrayOfObjects3.push(feed3);
+
+
+
+
+		
+		
+	
+	
+	
+	}
+
+
+
+
+if((JSON.stringify(arrayOfObjects3).charAt(JSON.stringify(arrayOfObjects3).length-1))!=']'){
+	 
+	 if(window.localStorage.getItem("totalerrchecker3")>=5){ window.localStorage.setItem("totalerrchecker3",0); alert('Error in system, webpage, or no internet conntection. Please check your internet and try again. If still does not work. Contact Hau Tran');}
+	 
+	 else
+	 {
+		 
+		setTimeout(function(){	
+
+		 
+		  window.location.reload();
+		  
+		  
+		}, 10333);   
+		  }
+	 
+	
+	 
+	 }
+	 
+	 
+if((JSON.stringify(arrayOfObjects3).charAt(0))!='['){
+	 
+	 if(window.localStorage.getItem("totalerrchecker3")>=5){ window.localStorage.setItem("totalerrchecker3",0); alert('Error in system, webpage, or no internet conntection. Please check your internet and try again. If still does not work. Contact Hau Tran');}
+	 
+	 else
+	 {
+		 
+		
+		 
+		 	setTimeout(function(){	
+
+		 
+		  window.location.reload();
+		  
+		  
+		}, 10333);  }
+	 
+	
+	 
+	 }
+
+
+totaljson=totaljson+JSON.stringify(arrayOfObjects3);
+	document.getElementsByClassName("initialloader")[0].innerHTML= "";
+	arrayOfObjects3 = null;
+
+
+
+alert(totaljson);
+
+
+
+szi++;
+
+window.localStorage.setItem("totalerrchecker3",0);
+
+
+if ( szi <= iii) { 
+
+
+
+srfg(iii);
+
+
+}
+
+else
+
+{
+	
+	if(catemore3 == 'women'){ //changer here
+		catemore3 = 'men';
+	 szi = 1;
+	 
+	 
+	var dds="https://shop.nordstrom.com/c/sale-mens-clothing?breadcrumb=Home%2FSale%2FMen%2FClothing&offset=1&sort=Newest"; 
+initialajax3(dds);
+	 
+	}
+	
+	else
+	
+		if(catemore3 == 'men'){ 
+		catemore3 = 'kids';
+	 szi = 1;
+	 
+	 
+	var dds="https://shop.nordstrom.com/c/sale-girls-apparel?breadcrumb=Home%2FSale%2FKids%2FGirls%2FClothing&sort=Newest"; 
+initialajax3(dds);
+	 
+	}
+	
+		else
+	
+		if(catemore3 == 'kids'){ 
+		catemore3 = 'home';
+	 szi = 1;
+	 
+	 
+	var dds="https://shop.nordstrom.com/c/sale-home-gifts?breadcrumb=Home%2FSale%2FHome&offset=1&sort=Newest"; 
+initialajax3(dds);
+	 
+	}
+	
+	
+			else
+	
+		if(catemore3 == 'home'){ 
+		catemore3 = 'wwaccessory';
+	 szi = 1;
+	 
+	 
+	var dds="https://shop.nordstrom.com/c/sale-womens-jewelry-watches?breadcrumb=Home%2FSale%2FWomen%2FJewelry&sort=Newest"; 
+initialajax3(dds);
+	 
+	}
+	
+	
+		////////////////////////////////////////women changeoption
+		
+		else
+	
+		if(catemore3 == 'wwaccessory'){ 
+		catemore3 = 'wwhandbag';
+	 szi = 1;
+	 
+	 
+	var dds="https://shop.nordstrom.com/c/sale-handbags-accessories?breadcrumb=Home%2FSale%2FWomen%2FAccessories&offset=1&sort=Newest"; 
+initialajax3(dds);
+	 
+	}	
+	
+	
+			else
+	
+		if(catemore3 == 'wwhandbag'){ 
+		catemore3 = 'wwshoes';
+	 szi = 1;
+	 
+	 
+	var dds="https://shop.nordstrom.com/c/sale-womens-shoes?breadcrumb=Home%2FSale%2FWomen%2FShoes&sort=Newest"; 
+initialajax3(dds);
+	 
+	}	
+	
+				else
+	
+		if(catemore3 == 'wwshoes'){ 
+		catemore3 = 'wwplus';
+	 szi = 1;
+	 
+	 
+	var dds="https://shop.nordstrom.com/c/sale-boys-apparel?breadcrumb=Home%2FSale%2FKids%2FBoys%2FClothing&sort=Newest"; 
+initialajax3(dds);
+	 
+	}	
+	
+	
+				else
+	
+		if(catemore3 == 'wwplus'){ 
+		catemore3 = 'mmaccessory';
+	 szi = 1;
+	 
+	 
+	var dds="https://shop.nordstrom.com/c/sale-mens-accessories?breadcrumb=Home%2FSale%2FMen%2FAccessories&offset=1&sort=Newest"; 
+initialajax3(dds);
+	 
+	}	
+		
+	
+	/////////////////////////////////men
+	
+		
+		else
+	
+		if(catemore3 == 'mmaccessory'){ 
+		catemore3 = 'mmshoes';
+	 szi = 1;
+	 
+	 
+	var dds="https://shop.nordstrom.com/c/sale-mens-shoes?breadcrumb=Home%2FSale%2FMen%2FShoes&offset=1&sort=Newest"; 
+initialajax3(dds);
+	 
+	}	
+	
+	
+
+	
+
+	
+	
+				else
+	
+		if(catemore3 == 'mmshoes'){ 
+		catemore3 = 'kkaccessory';
+	 szi = 1;
+	 
+	 ////////////////////////////kid
+	 
+	var dds="https://shop.nordstrom.com/c/sale-baby-gear?breadcrumb=Home%2FSale%2FKids%2FBaby%20Gear%20%26%20Essentials&sort=Newest"; 
+initialajax3(dds);
+	 
+	}	
+		
+	
+		
+	
+				else
+	
+		if(catemore3 == 'kkaccessory'){ 
+		catemore3 = 'kkshoes';
+	 szi = 1;
+	 
+	 ////////////////////////////kid
+	 
+	var dds="https://shop.nordstrom.com/c/baby-kids-shoes-sale?breadcrumb=Home%2FSale%2FKids%2FShoes&sort=Newest"; 
+initialajax3(dds);
+	 
+	}	
+		
+	
+	
+	
+		
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/////////////////////////////////end
+	
+	
+	
+	
+	else
+	{
+		 totaljson= totaljson.replace(/\]\[/g,',').replace(/,,/g, "").replace(/,]/g, "]");
+if(totaljson.length<=373){
+	 
+	 if(window.localStorage.getItem("totalerrchecker3")>=5){ window.localStorage.setItem("totalerrchecker3",0); alert('Error in system, webpage, or no internet conntection. Please check your internet and try again. If still does not work. Contact Hau Tran');}
+	 
+	 else
+	 {
+		 
+		
+		 
+		 	setTimeout(function(){	
+
+		 
+		  window.location.reload();
+		  
+		  
+		}, 10333);  }
+	 
+	
+	 
+	 }
+	 
+	 
+	onff8(totaljson) ;
+		
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+	
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		 },
+ error: function(xml, status, error){
+	 
+	 if(window.localStorage.getItem("totalerrchecker3")>=5){ window.localStorage.setItem("totalerrchecker3",0); alert('Error in system, webpage, or no internet conntection. Please check your internet and try again. If still does not work. Contact Hau Tran');}
+	 
+	 else
+	 {
+		 
+		
+		 
+		 	setTimeout(function(){	
+
+		 
+		  window.location.reload();
+		  
+		  
+		}, 10333);  }
+	 
+	
+	 
+	 },
+ complete: function(xml, status){
+  // do something after success or error no matter what
+  
+
+ }
+});
+
+
+
+
+
+}
+
+
+
+
+}
+
+
+
+
+
+
+//////////////////////////////////////////
+
+
+function Insomnia() {
+}
+
+Insomnia.prototype.keepAwake = function (successCallback, errorCallback) {
+  cordova.exec(successCallback, errorCallback, "Insomnia", "keepAwake", []);
+};
+
+Insomnia.prototype.allowSleepAgain = function (successCallback, errorCallback) {
+  cordova.exec(successCallback, errorCallback, "Insomnia", "allowSleepAgain", []);
+};
+
+Insomnia.install = function () {
+  if (!window.plugins) {
+    window.plugins = {};
+  }
+
+  window.plugins.insomnia = new Insomnia();
+  return window.plugins.insomnia;
+};
+
+cordova.addConstructor(Insomnia.install);
+
+
+window.plugins.insomnia.keepAwake();
+
+/////////////////////////////////////////////////
+
+
+
+}
+
+
+
+	});
+	
+	
+	
+	
+	
+	}
+	
+	
+	
+//////////////////////////////////////////////////////////	
+
+
+/*
+	
+	function secondhttp333(){
+		
+
+
+	
+cordova.plugin.http.get(dds, {
+  id: 12,
+  message: ''
+}, { Authorization: 'OAuth2: token' }, function(response) {
+	
+
+	 
+	
+	
+
+	
+	}, function(response) {
+		//error
+		
+		});
+
+
+
+
+
+
+
+}
+
+
+
+
+}
+
+
+
+		
+		}*/
+		
+		
+		
+		
+	
+//////////////////////////////////////////////////////
+</script>
+</body>
+</html>
